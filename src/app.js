@@ -1,17 +1,14 @@
 const { BrowserWindow } = require("electron");
 
-let window;
+const window = new BrowserWindow({
+  width: 800,
+  height: 600,
+  webPreferences: {
+    nodeIntegration: true,
+  },
+});
 
-function createWindows() {
-  new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true,
-    },
-  });
-  window.loadFile("src/ui/index.html");
-}
+window.loadFile("/ui/index.html");
 module.exports = {
   createWindows,
 };
