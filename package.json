@@ -1,0 +1,25 @@
+{
+  "name": "FSNotifications",
+  "version": "1.0.0",
+  "description": "Una simple aplicacion en electron utilizando la API de notificacion",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RicardoEGM/FSNotifications.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RicardoEGM/FSNotifications/issues"
+  },
+  "homepage": "https://github.com/RicardoEGM/FSNotifications#readme",
+  "dependencies": {
+    "electron": "^11.0.3",
+    "electron-reload": "^1.5.0"
+  }
+}
