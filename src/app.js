@@ -1,14 +1,28 @@
 const { BrowserWindow } = require("electron");
+const path = require("path");
+const url = require("url");
 
-const window = new BrowserWindow({
-  width: 800,
-  height: 600,
-  webPreferences: {
-    nodeIntegration: true,
-  },
-});
+let win;
 
-window.loadFile("/ui/index.html");
+function createWindow() {
+  win = new BrowserWindow({
+    width: 600,
+    height: 750,
+    webPreferences: {
+      nodeIntegration: true,
+    },
+  });
+  win.loadURL(
+    url.format({
+      pathname: path.join(__dirname, "ui", "index.html"),
+      protocol: "file:",
+      slashes: true,
+    })
+  );
+  win.webContents.openDevTools();
+}
+
+
 module.exports = {
-  createWindows,
+  createWindow,
 };
